@@ -1,0 +1,6 @@
+[package]
+name = "EVA"
+version = "0.1.0"
+authors = ["Ian Campbell <iancampbellcode@gmail.com>"]
+
+[dependencies]
