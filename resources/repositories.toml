@@ -1,0 +1,22 @@
+[[Repositories.Profile_1]]
+name = "PESS"
+url = "https://github.com/IanCampbellCode/PESS"
+branch = "master"
+
+[[Repositories.Profile_1]]
+name = "haha2"
+url = "gitman.git"
+branch = "master"
+build_command = "mvn clean install"
+
+[[Repositories.Profile_2]]
+name = "PESS"
+url = "https://github.com/IanCampbellCode/PESS"
+branch = "initial"
+build_command = ""
+
+[[Repositories.Profile_2]]
+name = "lmao2"
+url = "gitman.git"
+branch = "master"
+build_command = "mvn clean install"
