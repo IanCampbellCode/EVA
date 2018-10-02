@@ -1,0 +1,22 @@
+[[repositories.profile_1]]
+name = "PESS"
+url = "https://github.com/IanCampbellCode/PESS"
+branch = "master"
+
+[[repositories.profile_1]]
+name = "EVA"
+url = "https://github.com/IanCampbellCode/EVA"
+branch = "master"
+build_command = "cargo build"
+
+[[repositories.profile_2]]
+name = "PESS"
+url = "https://github.com/IanCampbellCode/PESS"
+branch = "initial"
+build_command = ""
+
+[[repositories.profile_2]]
+name = "EVA"
+url = "https://github.com/IanCampbellCode/EVA"
+branch = "master"
+build_command = "cargo build"
