@@ -61,3 +61,30 @@ Currently, no command line options are implemented, but these are the planned co
 
   - `-i`, `--ignore-errors`<br />
   Forces EVA to continue running and ignore any non-critical errors.
+
+  ## Contributing
+
+  This is currently a personal project, but if the project ever grows to the point that there are external contributors, a formal system of contributing is laid out.
+
+  ### General Guidelines
+
+  Use rust-fmt to ensure your formatting conforms to rust standards. I personally use CLION for developing and use an add-on to provide formatting help, this should also be possible in VS Code and other IDEs.
+
+  ### Branching
+
+  All development branches should be children of the `dev` branch. Once they are ready to be merged, they should be merged up to `dev`. After major milestones or intermittently as needed, the dev branch will be merged into `master`. The `master` branch is reserved for fully functional releases, after 1.0. Prior to 1.0, `master` will receive updates more regularly so as to best reflect the current capabilities of the project.
+
+  ### Pull Requests
+
+  All Pull Requests to should be linked to a specefic issue that they solve. Try to keep each pull request to one issue, unless they are very closely couples. All code should be tested and running before a pull request is made. The only exception to this is pre-1.0 pulls, which should compile and run, but may not have full functionality yet.
+
+  ## Design Philosophy
+
+  This program was built with 3 ideas in mind: ease of use, lack of dependencies and clean code.
+
+  This project was designed to both address a business need and provide a useful place to practice managing a project and writing good (and occasionally not so good) rust code. This means the project needs to be user-focused in its completed form, while still being a high quality example of rust code.
+
+  ## License
+This software is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for more information.
+
+
