@@ -1,10 +1,10 @@
-//extern crate toml;
+extern crate toml;
 
-use std::process::Command;
+//use std::process::Command;
 use std::fmt;
-//use toml::Value as Toml;
+use toml::Value as Toml;
 
-const REPO_LOCATION: &str = "/resources/repositories.toml";
+const REPO_LOCATION: &str = "resources/repositories.toml";
 
 struct RepoData {
     name: String,
@@ -13,17 +13,15 @@ struct RepoData {
 }
 impl fmt::Display for RepoData {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "(name: {}, url: {}, build_command: {})", self.name, self.url, self.build_command)
+        write!(f, "(name: {}\nurl: {}\nbuild_command: {})", self.name, self.url, self.build_command)
     }
 }
 
 
 fn main() {
-    //Read repository toml file
     let repositories = read_repository_toml(REPO_LOCATION);
-    //Perform Git Calls
-    for repo in repositories {
-
+    for repository in repositories {
+        println!("{}", repository);
     }
     //Perform Build Commands
 
@@ -34,16 +32,27 @@ fn read_repository_toml(file_location: &str) -> Vec<RepoData> {
     use std::fs::File;
     use std::io::Read;
 
-    let mut repositories = Vec::new();
-    let mut input = String::new();
+    let repositories = Vec::new();
 
-    let mut file = File::open(file_location).expect("Failed to open repositories.toml");
-    file.read_to_string(&mut input).expect("Failed to read repositories file to string");
-    println!("{}", input);
+    let mut file = File::open(file_location).expect("Could not find repository file");
+    
+    let mut file_contents = String::new();
+    file.read_to_string(&mut file_contents).expect("Failed to parse the repository file");
 
+    let toml: Toml;
+    match file_contents.parse::<Toml>() {
+        Ok(parsed_data) => {
+            toml = parsed_data;
+        }
+        Err(error) => {
+            println!("Failed to parse the repositories file: {}", error);
+            panic!();
+        }
+    }
+    println!("{}", toml["repositories"].is_table());
     return repositories;
 }
-
+/*
 /// Spawns a command process which calls the given git repos
 fn call_git(repo: RepoData) {
     //format url into a usable git command
@@ -72,3 +81,4 @@ fn create_process(command: &str) {
             }
     }
 }
+*/

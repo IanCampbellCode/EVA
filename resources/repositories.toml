@@ -1,22 +1,22 @@
-[[Repositories.Profile_1]]
+[[repositories.profile_1]]
 name = "PESS"
 url = "https://github.com/IanCampbellCode/PESS"
 branch = "master"
 
-[[Repositories.Profile_1]]
-name = "haha2"
-url = "gitman.git"
+[[repositories.profile_1]]
+name = "EVA"
+url = "https://github.com/IanCampbellCode/EVA"
 branch = "master"
-build_command = "mvn clean install"
+build_command = "cargo build"
 
-[[Repositories.Profile_2]]
+[[repositories.profile_2]]
 name = "PESS"
 url = "https://github.com/IanCampbellCode/PESS"
 branch = "initial"
 build_command = ""
 
-[[Repositories.Profile_2]]
-name = "lmao2"
-url = "gitman.git"
+[[repositories.profile_2]]
+name = "EVA"
+url = "https://github.com/IanCampbellCode/EVA"
 branch = "master"
-build_command = "mvn clean install"
+build_command = "cargo build"
